@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <script src="{% static 'js/script.js' %}"></script>
+    <title>Document</title>
+</head>
+<body>
+    <p>Esse perfil é do {{nome}} </p>
+{% if nome == "cachorro" %}
+    <p> sim, essa é de cachorros</p>
+{% elif nome == "cachorro"}
+    <p>Essa pagina é da Deniza</p>
+{% endif %}    
+    <h1>Esses são dogs</h1>
+    <ul>
+{% for dog in cachorros %}
+        <li>{{dog}}</li>
+{% endfor %}
+ 
+    </ul>
+    </body>
+</html>
